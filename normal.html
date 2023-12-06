@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <title>Concert Plan</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body class="">
+  <main class="py-2 px-5 " id="app" >
+    <div class="plan-layout">
+      <div>
+        <div class="zone-c mb-1">
+          <div class="zone-title">zone c</div>
+          <div class="table-layout">
+            <div class="box1">
+              <div class="d-flex flex-column justify-content-end gap-2">
+                  <a href="#" class="table" :class="['table', { booked: isActive('C8') }]" @click="handleTableClick('C8')">C8</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C7') }]" @click="handleTableClick('C7')">C7</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C6') }]" @click="handleTableClick('C6')">C6</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                  <a href="#" class="table" :class="['table', { booked: isActive('C14') }]" @click="handleTableClick('C14')">C14</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C13') }]" @click="handleTableClick('C13')">C13</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C12') }]" @click="handleTableClick('C12')">C12</a>
+              </div>
+
+              <div class="d-flex flex-column justify-content-end gap-2">
+
+                  <a href="#" class="table" :class="['table', { booked: isActive('C17') }]" @click="handleTableClick('C17')">C17</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C16') }]" @click="handleTableClick('C16')">C16</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C15') }]" @click="handleTableClick('C15')">C15</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                  <a href="#" class="table" :class="['table', { booked: isActive('C23') }]" @click="handleTableClick('C23')">C23</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C22') }]" @click="handleTableClick('C22')">C22</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C21') }]" @click="handleTableClick('C21')">C21</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                  <a href="#" class="table" :class="['table', { booked: isActive('C14') }]" @click="handleTableClick('C14')">C29</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C14') }]" @click="handleTableClick('C14')">C28</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C14') }]" @click="handleTableClick('C14')">C27</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C36') }]" @click="handleTableClick('C36')">C36</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C35') }]" @click="handleTableClick('C35')">C35</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C34') }]" @click="handleTableClick('C34')">C34</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C33') }]" @click="handleTableClick('C33')">C33</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C43') }]" @click="handleTableClick('C43')">C43</a>       
+                  <a href="#" class="table" :class="['table', { booked: isActive('C42') }]" @click="handleTableClick('C42')">C42</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C41') }]" @click="handleTableClick('C41')">C41</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C40') }]" @click="handleTableClick('C40')">C40</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C47') }]" @click="handleTableClick('C47')">C47</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C46') }]" @click="handleTableClick('C46')">C46</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C45') }]" @click="handleTableClick('C45')">C45</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C44') }]" @click="handleTableClick('C44')">C44</a>
+              </div>
+            </div>
+            <div class="box2">
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C54') }]" @click="handleTableClick('C54')">C54</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C53') }]" @click="handleTableClick('C53')">C53</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C52') }]" @click="handleTableClick('C52')">C52</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C51') }]" @click="handleTableClick('C51')">C51</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C61') }]" @click="handleTableClick('C61')">C61</a>  
+                  <a href="#" class="table" :class="['table', { booked: isActive('C60') }]" @click="handleTableClick('C60')">C60</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C59') }]" @click="handleTableClick('C59')">C59</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C58') }]" @click="handleTableClick('C58')">C58</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                  <a href="#" class="table" :class="['table', { booked: isActive('C66') }]" @click="handleTableClick('C66')">C66</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C65') }]" @click="handleTableClick('C65')">C65</a>
+              </div>
+            </div>
+            <div class="box3">
+              <div class="d-flex align-items-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C1') }]" @click="handleTableClick('C1')">C1</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C2') }]" @click="handleTableClick('C2')">C2</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                  <a href="#" class="table" :class="['table', { booked: isActive('C5') }]" @click="handleTableClick('C5')">C5</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('C4') }]" @click="handleTableClick('C4')">C4</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C3') }]" @click="handleTableClick('C3')">C3</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C11') }]" @click="handleTableClick('C11')">C11</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C10') }]" @click="handleTableClick('C10')">C10</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C9') }]" @click="handleTableClick('C9')">C9</a>
+              </div>
+              <div class="d-flex flex-column justify-content-start">
+                <div class="tv text-center">
+                  <i class="bi bi-tv text-white fs-5"></i>
+                </div>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C20') }]" @click="handleTableClick('C20')">C20</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C19') }]" @click="handleTableClick('C19')">C19</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C18') }]" @click="handleTableClick('C18')">C18</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C26') }]" @click="handleTableClick('C26')">C26</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C25') }]" @click="handleTableClick('C25')">C25</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C24') }]" @click="handleTableClick('C24')">C24</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C32') }]" @click="handleTableClick('C32')">C32</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C31') }]" @click="handleTableClick('C31')">C31</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C30') }]" @click="handleTableClick('C30')">C30</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C39') }]" @click="handleTableClick('C39')">C39</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C38') }]" @click="handleTableClick('C38')">C38</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C37') }]" @click="handleTableClick('C37')">C37</a>
+              </div>
+              <div class="d-flex flex-column justify-content-start">
+                <div class="tv text-center">
+                  <i class="bi bi-tv text-white fs-5"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box4">
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C50') }]" @click="handleTableClick('C50')">C50</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C49') }]" @click="handleTableClick('C49')">C49</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C48') }]" @click="handleTableClick('C48')">C48</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C57') }]" @click="handleTableClick('C57')">C57</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C56') }]" @click="handleTableClick('C56')">C56</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C55') }]" @click="handleTableClick('C55')">C55</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C64') }]" @click="handleTableClick('C64')">C64</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C63') }]" @click="handleTableClick('C63')">C63</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C62') }]" @click="handleTableClick('C62')">C62</a>
+              </div>
+              <div class="d-flex flex-column justify-content-end gap-2">
+                <a href="#" class="table" :class="['table', { booked: isActive('C68') }]" @click="handleTableClick('C68')">C68</a>
+                <a href="#" class="table" :class="['table', { booked: isActive('C67') }]" @click="handleTableClick('C67')">C67</a>
+              </div>
+            </div>
+            <div class="box5"></div>
+          </div>
+        </div>
+        <div class="wrap-zone">
+          <div class="zone-b">
+            <div class="zone-title">zone b</div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('S8') }]" @click="handleTableClick('S8')">S8</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('S7') }]" @click="handleTableClick('S7')">S7</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('S6') }]" @click="handleTableClick('S6')">S6</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('S5') }]" @click="handleTableClick('S5')">S5</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('S4') }]" @click="handleTableClick('S4')">S4</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('S3') }]" @click="handleTableClick('S3')">S3</a>
+            </div>
+            
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('S2') }]" @click="handleTableClick('S2')">S2</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('S1') }]" @click="handleTableClick('S1')">S1</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B5') }]" @click="handleTableClick('B5')">B5</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B4') }]" @click="handleTableClick('B4')">B4</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B3') }]" @click="handleTableClick('B3')">B3</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B2') }]" @click="handleTableClick('B2')">B2</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B1') }]" @click="handleTableClick('B1')">B1</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B10') }]" @click="handleTableClick('B10')">B10</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B9') }]" @click="handleTableClick('B9')">B9</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B8') }]" @click="handleTableClick('B8')">B8</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B7') }]" @click="handleTableClick('B7')">B7</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B6') }]" @click="handleTableClick('B6')">B6</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B15') }]" @click="handleTableClick('B15')">B15</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B14') }]" @click="handleTableClick('B14')">B14</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B13') }]" @click="handleTableClick('B13')">B13</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B12') }]" @click="handleTableClick('B12')">B12</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B11') }]" @click="handleTableClick('B11')">B11</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B20') }]" @click="handleTableClick('B20')">B20</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B19') }]" @click="handleTableClick('B19')">B19</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B18') }]" @click="handleTableClick('B18')">B18</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B17') }]" @click="handleTableClick('B17')">B17</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B16') }]" @click="handleTableClick('B16')">B16</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B25') }]" @click="handleTableClick('B25')">B25</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B24') }]" @click="handleTableClick('B24')">B24</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B23') }]" @click="handleTableClick('B23')">B23</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B22') }]" @click="handleTableClick('B22')">B22</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B21') }]" @click="handleTableClick('B21')">B21</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B30') }]" @click="handleTableClick('B30')">B30</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B29') }]" @click="handleTableClick('B29')">B29</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B28') }]" @click="handleTableClick('B28')">B28</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B27') }]" @click="handleTableClick('B27')">B27</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B26') }]" @click="handleTableClick('B26')">B26</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B35') }]" @click="handleTableClick('B35')">B35</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B34') }]" @click="handleTableClick('B34')">B34</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B33') }]" @click="handleTableClick('B33')">B33</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B32') }]" @click="handleTableClick('B32')">B32</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B31') }]" @click="handleTableClick('B31')">B31</a>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('B40') }]" @click="handleTableClick('B40')">B40</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B39') }]" @click="handleTableClick('B39')">B39</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B38') }]" @click="handleTableClick('B38')">B38</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B37') }]" @click="handleTableClick('B37')">B37</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('B36') }]" @click="handleTableClick('B36')">B36</a>
+            </div>
+            <div class="d-flex flex-column gap-2 justify-content-end">
+              <a href="#" class="table" :class="['table', { booked: isActive('B41') }]" @click="handleTableClick('B41')">B41</a>
+            </div>
+          </div>
+          <div class="zone-a">
+            <div class="zone-title">zone a</div>
+            <div class="d-flex flex-column gap-2 justify-content-end ms-1 me-4">
+              <a href="#" class="table" :class="['table', { booked: isActive('F5') }]" @click="handleTableClick('F5')">F5</a>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-2 justify-content-end me-4">
+              <a href="#" class="table" :class="['table', { booked: isActive('F4') }]" @click="handleTableClick('F4')">F4</a>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              
+              <a href="#" class="table" :class="['table', { booked: isActive('A8') }]" @click="handleTableClick('A8')">A8</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A7') }]" @click="handleTableClick('A7')">A7</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A6') }]" @click="handleTableClick('A6')">A6</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A5') }]" @click="handleTableClick('A5')">A5</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A4') }]" @click="handleTableClick('A4')">A4</a>
+            
+
+              <a href="#" class="table" :class="['table', { booked: isActive('A3') }]" @click="handleTableClick('A3')">A3</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A2') }]" @click="handleTableClick('A2')">A2</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A1') }]" @click="handleTableClick('A1')">A1</a>
+           
+
+              <a href="#" class="table" :class="['table', { booked: isActive('F3') }]" @click="handleTableClick('F3')">F3</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('F2') }]" @click="handleTableClick('F2')">F2</a>
+            </div>
+            <div class="d-flex flex-column gap-1">
+            
+              <a href="#" class="table" :class="['table', { booked: isActive('A16') }]" @click="handleTableClick('A16')">A16</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A15') }]" @click="handleTableClick('A15')">A15</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A14') }]" @click="handleTableClick('A14')">A14</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A13') }]" @click="handleTableClick('A13')">A13</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A12') }]" @click="handleTableClick('A12')">A12</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A11') }]" @click="handleTableClick('A11')">A11</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A10') }]" @click="handleTableClick('A10')">A10</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A19') }]" @click="handleTableClick('A19')">A19</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('F1') }]" @click="handleTableClick('F1')">F1</a>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A24') }]" @click="handleTableClick('A24')">A24</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A23') }]" @click="handleTableClick('A23')">A23</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A22') }]" @click="handleTableClick('A22')">A22</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A21') }]" @click="handleTableClick('A21')">A21</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A20') }]" @click="handleTableClick('A20')">A20</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A19') }]" @click="handleTableClick('A19')">A19</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A18') }]" @click="handleTableClick('A18')">A18</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A17') }]" @click="handleTableClick('A17')">A17</a>
+              
+
+              <div class="empty-box"></div>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A32') }]" @click="handleTableClick('A32')">A32</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A31') }]" @click="handleTableClick('A31')">A31</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A30') }]" @click="handleTableClick('A30')">A30</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A29') }]" @click="handleTableClick('A29')">A29</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A28') }]" @click="handleTableClick('A28')">A28</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A27') }]" @click="handleTableClick('A27')">A27</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A26') }]" @click="handleTableClick('A26')">A26</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A25') }]" @click="handleTableClick('A25')">A25</a>
+              <div class="empty-box"></div>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A40') }]" @click="handleTableClick('A40')">A40</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A39') }]" @click="handleTableClick('A39')">A39</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A38') }]" @click="handleTableClick('A38')">A38</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A37') }]" @click="handleTableClick('A37')">A37</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A36') }]" @click="handleTableClick('A36')">A36</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A35') }]" @click="handleTableClick('A35')">A35</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A34') }]" @click="handleTableClick('A34')">A34</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A33') }]" @click="handleTableClick('A33')">A33</a>
+
+              <div class="empty-box"></div>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A48') }]" @click="handleTableClick('A48')">A48</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A47') }]" @click="handleTableClick('A47')">A47</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A46') }]" @click="handleTableClick('A46')">A46</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A45') }]" @click="handleTableClick('A45')">A45</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A44') }]" @click="handleTableClick('A44')">A44</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A43') }]" @click="handleTableClick('A43')">A43</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A42') }]" @click="handleTableClick('A42')">A42</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A41') }]" @click="handleTableClick('A41')">A41</a>
+              <div class="empty-box"></div>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A56') }]" @click="handleTableClick('A56')">A56</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A55') }]" @click="handleTableClick('A55')">A55</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A54') }]" @click="handleTableClick('A54')">A54</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A53') }]" @click="handleTableClick('A53')">A53</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A52') }]" @click="handleTableClick('A52')">A52</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A51') }]" @click="handleTableClick('A51')">A51</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A50') }]" @click="handleTableClick('A50')">A50</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A49') }]" @click="handleTableClick('A49')">A49</a>
+              <div class="empty-box"></div>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A64') }]" @click="handleTableClick('A64')">A64</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A63') }]" @click="handleTableClick('A63')">A63</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A62') }]" @click="handleTableClick('A62')">A62</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A61') }]" @click="handleTableClick('A61')">A61</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A60') }]" @click="handleTableClick('A60')">A60</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A59') }]" @click="handleTableClick('A59')">A59</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A58') }]" @click="handleTableClick('A58')">A58</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A57') }]" @click="handleTableClick('A57')">A57</a>
+              <div class="empty-box"></div>
+              <div class="empty-box"></div>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A72') }]" @click="handleTableClick('A72')">A72</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A71') }]" @click="handleTableClick('A71')">A71</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A70') }]" @click="handleTableClick('A70')">A70</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A69') }]" @click="handleTableClick('A69')">A69</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A68') }]" @click="handleTableClick('A68')">A68</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A67') }]" @click="handleTableClick('A67')">A67</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A66') }]" @click="handleTableClick('A66')">A66</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A65') }]" @click="handleTableClick('A65')">A65</a>
+
+              <div class="empty-box"></div>
+              <a href="#" class="table" :class="['table', { booked: isActive('D1') }]" @click="handleTableClick('D1')">D1</a>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A80') }]" @click="handleTableClick('A80')">A80</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A79') }]" @click="handleTableClick('A79')">A79</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A78') }]" @click="handleTableClick('A78')">A78</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A77') }]" @click="handleTableClick('A77')">A77</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A76') }]" @click="handleTableClick('A76')">A76</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A75') }]" @click="handleTableClick('A75')">A75</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A74') }]" @click="handleTableClick('A74')">A74</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A73') }]" @click="handleTableClick('A73')">A73</a>
+
+              <a href="#" class="table" :class="['table', { booked: isActive('D3') }]" @click="handleTableClick('D3')">D3</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('D2') }]" @click="handleTableClick('D2')">D2</a>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A88') }]" @click="handleTableClick('A88')">A88</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A87') }]" @click="handleTableClick('A87')">A87</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A86') }]" @click="handleTableClick('A86')">A86</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A85') }]" @click="handleTableClick('A85')">A85</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A84') }]" @click="handleTableClick('A84')">A84</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A83') }]" @click="handleTableClick('A83')">A83</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A82') }]" @click="handleTableClick('A82')">A82</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A81') }]" @click="handleTableClick('A81')">A81</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('D5') }]" @click="handleTableClick('D5')">D5</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('D4') }]" @click="handleTableClick('D4')">D4</a>
+            </div>
+            <div class="d-flex flex-column gap-1">
+              <a href="#" class="table" :class="['table', { booked: isActive('A96') }]" @click="handleTableClick('A96')">A96</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A95') }]" @click="handleTableClick('A95')">A95</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A94') }]" @click="handleTableClick('A94')">A94</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A93') }]" @click="handleTableClick('A93')">A93</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A92') }]" @click="handleTableClick('A92')">A92</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A91') }]" @click="handleTableClick('A91')">A91</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A90') }]" @click="handleTableClick('A90')">A90</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('A89') }]" @click="handleTableClick('A89')">A89</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('D7') }]" @click="handleTableClick('D7')">D7</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('D6') }]" @click="handleTableClick('D6')">D6</a>
+            </div>
+          </div>
+          <div class="stage">
+            <div>stage</div>
+          </div>
+          <div class="zone-vvip">
+            <div class="zone-title">zone vvip</div>
+            <div class="vip-bar">vip bar</div>
+            <div class="d-flex flex-column w-100">
+              <div class="d-flex ustify-content-between">
+                <div class="d-flex flex-column justify-content-start gap-2 ms-4">
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP10') }]" @click="handleTableClick('VVIP10')">10</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP8') }]" @click="handleTableClick('VVIP8')">8</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP6') }]" @click="handleTableClick('VVIP6')">6</a>
+                </div>
+                <div class="d-flex flex-column ms-3">
+                  <div class="empty-box"></div>
+                </div>
+                <div class="d-flex flex-column justify-content-end gap-2 ">
+                  <div class="empty-box"></div>
+                  <!-- <a href="#" class="table" :class="tableClass('VVIP9')"  @click="handleTableClick('VVIP9')">9</a> -->
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP9') }]"  @click="handleTableClick('VVIP9')">9</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP7') }]" @click="handleTableClick('VVIP7')">7</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP5') }]" @click="handleTableClick('VVIP5')">5</a>
+                </div>
+              </div>
+              <div class="vvip-label">vvip</div>
+              <div class="d-flex h-100">
+                <div class="d-flex flex-column gap-2 ms-4">
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP4') }]" @click="handleTableClick('VVIP4')">4</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP2') }]" @click="handleTableClick('VVIP2')">2</a>
+                </div>
+                <div class="d-flex flex-column ms-3">
+                  <div class="empty-box"></div>
+                </div>
+                <div class="d-flex flex-column justify-content-end gap-2 ">
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP3') }]" @click="handleTableClick('VVIP3')">3</a>
+                  <a href="#" class="table" :class="['table', { booked: isActive('VVIP1') }]" @click="handleTableClick('VVIP1')">1</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cafe mb-3">
+          <span>cafe <i class="bi bi-cake2"></i></span>
+        </div>
+        <div class="zone-bar mb-3">
+          <div class="d-flex gap-2 mb-3">
+            <div class="bar flex-grow-1">
+              bar <i class="bi bi-cup-straw"></i>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="#" class="table align-self-end">1</a>
+            <a href="#" class="table align-self-end">2</a>
+            <a href="#" class="table align-self-end">3</a>
+            <a href="#" class="table align-self-end">4</a>
+            <a href="#" class="table align-self-end">5</a>
+            <a href="#" class="table align-self-end">6</a>
+            <a href="#" class="table align-self-end">7</a>
+            <a href="#" class="table align-self-end">8</a>
+          </div>
+        </div>
+        <div class="zone-pink mb-2">
+          <div class="d-flex flex-column justify-content-end gap-2">
+            <a href="#" class="table" :class="['table', { booked: isActive('E2') }]" @click="handleTableClick('E2')">E2</a>
+            <a href="#" class="table" :class="['table', { booked: isActive('E1') }]" @click="handleTableClick('E1')">E1</a>
+          </div>
+          <div class="d-flex flex-column justify-content-end gap-2">
+            <a href="#" class="table" :class="['table', { booked: isActive('E4') }]" @click="handleTableClick('E4')">E4</a>
+            <a href="#" class="table" :class="['table', { booked: isActive('E3') }]" @click="handleTableClick('E3')">E3</a>
+          </div>
+          <div class="d-flex flex-column justify-content-end gap-2">
+            <a href="#" class="table" :class="['table', { booked: isActive('E6') }]" @click="handleTableClick('E6')">E6</a>
+            <a href="#" class="table" :class="['table', { booked: isActive('E5') }]" @click="handleTableClick('E5')">E5</a>
+          </div>
+          <div class="d-flex flex-column justify-content-end gap-2">
+            <a href="#" class="table" :class="['table', { booked: isActive('E8') }]" @click="handleTableClick('E8')">E8</a>
+            <a href="#" class="table" :class="['table', { booked: isActive('E7') }]" @click="handleTableClick('E7')">E7</a>
+          </div>
+          <div class="d-flex flex-column justify-content-end gap-2">
+            <a href="#" class="table" :class="['table', { booked: isActive('E10') }]" @click="handleTableClick('E10')">E10</a>
+            <a href="#" class="table" :class="['table', { booked: isActive('E9') }]" @click="handleTableClick('E9')">E9</a>
+          </div>
+          
+        </div>
+        <div class="toilet">
+          <div class="control-room">control room</div>
+          <div class="men">
+            <div>
+              <i class="bi bi-person-standing toilet-icon"></i>
+              <div class="toilet-text">MEN</div>
+            </div>
+          </div>
+          <div class="women">
+            <div>
+              <i class="bi bi-person-standing-dress toilet-icon"></i>
+              <div class="toilet-text">WOMEN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="entrance">
+          <div>
+            <div class="text-en">entrance</div>
+            <div class="icon-en"><i class="bi bi-caret-up-fill"></i><i class="bi bi-caret-down-fill"></i></div>
+          </div>
+        </div>
+        <div class="img-popcron text-center">
+          <img src="8059.jpg" width="100" alt="">
+          <div class="zone-pink mb-2">
+            <div class="d-flex flex-column justify-content-end gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('E11') }]" @click="handleTableClick('E11')">E11</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('E12') }]" @click="handleTableClick('E12')">E12</a>
+            </div>
+            <div class="d-flex flex-column justify-content-end gap-2">
+              <a href="#" class="table" :class="['table', { booked: isActive('E13') }]" @click="handleTableClick('E13')">E13</a>
+              <a href="#" class="table" :class="['table', { booked: isActive('E14') }]" @click="handleTableClick('E14')">E14</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+<script>
+
+  new Vue({
+    el: '#app',
+    data: {
+        bookingInfo: {
+        date: "2023-12-11",
+        tables: [
+          // {"table": "A1"},
+          // {"table": "A2"},
+          // {"table": "A3"},
+          // {"table": "A4"},
+          // {"table": "A5"},
+          // {"table": "A6"},
+          // {"table": "A7"},
+          // {"table": "A8"},
+          // {"table": "A9"},
+          // {"table": "A10"},
+          // {"table": "A11"},
+          // {"table": "A12"},
+          // {"table": "A13"},
+          // {"table": "A14"},
+          // {"table": "A15"},
+          // {"table": "A16"},
+          // {"table": "A17"},
+          // {"table": "A18"},
+          // {"table": "A19"},
+          // {"table": "A20"},
+          // {"table": "A21"},
+          // {"table": "A22"},
+          // {"table": "A23"},
+          // {"table": "A24"},
+          // {"table": "A25"},
+          // {"table": "A26"},
+          // {"table": "A27"},
+          // {"table": "A28"},
+          // {"table": "A29"},
+          // {"table": "A30"},
+          // {"table": "A31"},
+          // {"table": "A32"},
+          // {"table": "A33"},
+          // {"table": "A34"},
+          // {"table": "A35"},
+          // {"table": "A36"},
+          // {"table": "A37"},
+          // {"table": "A38"},
+          // {"table": "A39"},
+          // {"table": "A40"},
+          // {"table": "A41"},
+          // {"table": "A42"},
+          // {"table": "A43"},
+          // {"table": "A44"},
+          // {"table": "A45"},
+          // {"table": "A46"},
+          // {"table": "A47"},
+          // {"table": "A48"},
+          // {"table": "A49"},
+          // {"table": "A50"},
+          // {"table": "A51"},
+          // {"table": "A52"},
+          // {"table": "A53"},
+          // {"table": "A54"},
+          // {"table": "A55"},
+          // {"table": "A56"},
+          // {"table": "A57"},
+          // {"table": "A58"},
+          // {"table": "A59"},
+          // {"table": "A60"},
+          // {"table": "A61"},
+          // {"table": "A62"},
+          // {"table": "A63"},
+          // {"table": "A64"},
+          // {"table": "A65"},
+          // {"table": "A66"},
+          // {"table": "A67"},
+          // {"table": "A68"},
+          // {"table": "A69"},
+          // {"table": "A70"},
+          // {"table": "A71"},
+          // {"table": "A72"},
+          // {"table": "A73"},
+          // {"table": "A74"},
+          // {"table": "A75"},
+          // {"table": "A76"},
+          // {"table": "A77"},
+          // {"table": "A78"},
+          // {"table": "A79"},
+          // {"table": "A80"},
+          // {"table": "A81"},
+          // {"table": "A82"},
+          // {"table": "A83"},
+          // {"table": "A84"},
+          // {"table": "A85"},
+          // {"table": "A86"},
+          // {"table": "A87"},
+          // {"table": "A88"},
+          // {"table": "A89"},
+          // {"table": "A90"},
+          // {"table": "A91"},
+          // {"table": "A92"},
+          // {"table": "A93"},
+          // {"table": "A94"},
+          // {"table": "A95"},
+          // {"table": "A96"},
+          // {"table": "B1"},
+          // {"table": "B2"},
+          // {"table": "B3"},
+          // {"table": "B4"},
+          // {"table": "B5"},
+          // {"table": "B6"},
+          // {"table": "B7"},
+          // {"table": "B8"},
+          // {"table": "B9"},
+          // {"table": "B10"},
+          // {"table": "B11"},
+          // {"table": "B12"},
+          // {"table": "B13"},
+          // {"table": "B14"},
+          // {"table": "B15"},
+          // {"table": "B16"},
+          // {"table": "B17"},
+          // {"table": "B18"},
+          // {"table": "B19"},
+          // {"table": "B20"},
+          // {"table": "B21"},
+          // {"table": "B22"},
+          // {"table": "B23"},
+          // {"table": "B24"},
+          // {"table": "B25"},
+          // {"table": "B26"},
+          // {"table": "B27"},
+          // {"table": "B28"},
+          // {"table": "B29"},
+          // {"table": "B30"},
+          // {"table": "B31"},
+          // {"table": "B32"},
+          // {"table": "B33"},
+          // {"table": "B34"},
+          // {"table": "B35"},
+          // {"table": "B36"},
+          // {"table": "B37"},
+          // {"table": "B38"},
+          // {"table": "B39"},
+          // {"table": "B40"},
+          // {"table": "B41"},
+          // {"table": "C1"},
+          // {"table": "C2"},
+          // {"table": "C3"},
+          // {"table": "C4"},
+          // {"table": "C5"},
+          // {"table": "C6"},
+          // {"table": "C7"},
+          // {"table": "C8"},
+          // {"table": "C9"},
+          // {"table": "C10"},
+          // {"table": "C11"},
+          // {"table": "C12"},
+          // {"table": "C13"},
+          // {"table": "C14"},
+          // {"table": "C15"},
+          // {"table": "C16"},
+          // {"table": "C17"},
+          // {"table": "C18"},
+          // {"table": "C19"},
+          // {"table": "C20"},
+          // {"table": "C21"},
+          // {"table": "C22"},
+          // {"table": "C23"},
+          // {"table": "C24"},
+          // {"table": "C25"},
+          // {"table": "C26"},
+          // {"table": "C27"},
+          // {"table": "C28"},
+          // {"table": "C29"},
+          // {"table": "C30"},
+          // {"table": "C31"},
+          // {"table": "C32"},
+          // {"table": "C33"},
+          // {"table": "C34"},
+          // {"table": "C35"},
+          // {"table": "C36"},
+          // {"table": "C37"},
+          // {"table": "C38"},
+          // {"table": "C39"},
+          // {"table": "C40"},
+          // {"table": "C41"},
+          // {"table": "C42"},
+          // {"table": "C43"},
+          // {"table": "C44"},
+          // {"table": "C45"},
+          // {"table": "C46"},
+          // {"table": "C47"},
+          // {"table": "C48"},
+          // {"table": "C49"},
+          // {"table": "C50"},
+          // {"table": "C51"},
+          // {"table": "C52"},
+          // {"table": "C53"},
+          // {"table": "C54"},
+          // {"table": "C55"},
+          // {"table": "C56"},
+          // {"table": "C57"},
+          // {"table": "C58"},
+          // {"table": "C59"},
+          // {"table": "C60"},
+          // {"table": "C61"},
+          // {"table": "C62"},
+          // {"table": "C63"},
+          // {"table": "C64"},
+          // {"table": "C65"},
+          // {"table": "C66"},
+          // {"table": "C67"},
+          // {"table": "C68"},
+          // {"table": "D1"},
+          // {"table": "D2"},
+          // {"table": "D3"},
+          // {"table": "D4"},
+          // {"table": "D5"},
+          // {"table": "D6"},
+          // {"table": "D7"},
+          // {"table": "E1"},
+          // {"table": "E2"},
+          // {"table": "E3"},
+          // {"table": "E4"},
+          // {"table": "E5"},
+          // {"table": "E6"},
+          // {"table": "E7"},
+          // {"table": "E8"},
+          {"table": "E9"},
+          {"table": "E10"},
+          {"table": "E11"},
+          {"table": "E12"},
+          {"table": "E13"},
+          {"table": "E14"},
+          {"table": "F1"},
+          {"table": "F2"},
+          {"table": "F3"},
+          {"table": "F4"},
+          {"table": "F5"},
+          {"table": "S1"},
+          // {"table": "S2"},
+          // {"table": "S3"},
+          // {"table": "S4"},
+          // {"table": "S5"},
+          // {"table": "S6"},
+          // {"table": "S7"},
+          // {"table": "S8"},
+          // {"table": "VVIP1"},
+          // {"table": "VVIP2"},
+          // {"table": "VVIP3"},
+          // {"table": "VVIP4"},
+          // {"table": "VVIP5"},
+          // {"table": "VVIP6"},
+          // {"table": "VVIP7"},
+          // {"table": "VVIP8"},
+          // {"table": "VVIP9"},
+          // {"table": "VVIP10"},
+          
+        ]
+      }
+    },
+    methods: {
+      isActive(table) {
+        return this.bookingInfo.tables.some(bookedTable => bookedTable.table === table);
+      },
+      handleTableClick(table) {
+          console.log("Table clicked:", table);
+      },
+      // tableClass( _table ) {
+      //   return ['table', { booked: this.isActive('VVIP9') }];
+      // }
+    },
+
+  });
+</script>
+
+</html>
