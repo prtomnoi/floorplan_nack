@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Concert Plan</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -169,10 +169,10 @@
             </div>
             <div class="d-flex flex-column gap-2">
               <a href="#" class="table"  :class="['table', { booked: isActive('S2') }]" data-id="S2">S2</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('S1') }]" data-id="S1">S1</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('S1')]: getClassForTable('S1') }]" data-id="S1">S1</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('B5') }]" data-id="B5">B5</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B5')]: getClassForTable('B5') }]" data-id="B5">B5</a>
               <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B4') }]"
                 data-id="B4"><span>B4</span><span>B3</span></a>
               <a href="#" class="table" :class="['table', { booked: isActive('B2') }]" data-id="B2">B2</a>
@@ -378,8 +378,8 @@
               <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A74') }]"
                 data-id="A74"><span>A74</span><span>A73</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('D3'), [getClassForTable('D3')]: getClassForTable('D3') }]" data-id="D3">D3</a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('D2'), [getClassForTable('D2')]: getClassForTable('D2') }]" data-id="D2">D2</a>
+              <a href="#" class="table" :class="[ {  [getClassForTable('D3')]: getClassForTable('D3') }]" data-id="D3">D3</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('D2')]: getClassForTable('D2') }]" data-id="D2">D2</a>
             </div>
             <div class="d-flex flex-column gap-1">
               <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked2: isActive('A88') }]" @click="handleTableClick('A88')"
@@ -392,8 +392,8 @@
               <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="['table', { booked: isActive('A82') }]"
                 data-id="A82"><span>A82</span><span>A81</span></a>
 
-              <a href="#" class="table"  :class="['table', { [getClassForTable('D5')]: getClassForTable('D5') }]" data-id="D5">D5</a>
-              <a href="#" class="table"  :class="['table', { [getClassForTable('D4')]: getClassForTable('D4') }]" data-id="D4">D4</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('D5')]: getClassForTable('D5') }]" data-id="D5">D5</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('D4')]: getClassForTable('D4') }]" @click="handleTableClick('D4')" data-id="D4">D4</a>
             </div>
             <div class="d-flex flex-column gap-1">
               <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="['table', { booked: isActive('A96') }]"
@@ -493,7 +493,7 @@
           </div>
           <div class="d-flex flex-column justify-content-end gap-2">
             <a href="#" class="table" class="['table', { booked: isActive('E10') }]" data-id="E10">E10</a>
-            <a href="#" class="table" :class="['table', { booked: isActive('E9') }]" @click="handleTableClick('E9')"data-id="E9" >E9</a>
+            <a href="#" class="table" :class="['table', { booked: isActive('E9') }]" @click="handleTableClick('E9')" data-id="E9" >E9</a>
           </div>
         </div>
         <div class="toilet">
@@ -687,8 +687,12 @@
           bookingInfo: {
           date: "2023-12-11",
           tables: [
+            {"table": "B5", "bookedType": "C"},
+            {"table": "D2", "bookedType": "A"},
+            {"table": "D3", "bookedType": "B"},
             {"table": "D4", "bookedType": "B"},
             {"table": "D5" , "bookedType": "A"},
+            {"table": "S1" , "bookedType": "D"},
 
           ]
         }
@@ -741,11 +745,11 @@
         const tableEl = document.querySelector(`[data-id="${tableID}"]`);
 
         console.log(tableID);
-        console.log(tableEl);
+        // console.log(tableEl);
 
         let radioChecked = Array.from(radioEl).find((radio) => radio.checked);
 
-        console.log(radioChecked);
+        // console.log(radioChecked);
 
         radioChecked.value == "p3"
           ? tableEl.classList.add("p3")
@@ -778,7 +782,7 @@
               case 'A': return 'p1';
               case 'B': return 'p2';
               case 'C': return 'p3';
-              case 'D': return 'p4';
+              case 'D': return 'reserve';
               default: return '';
             }
           }
