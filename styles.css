@@ -480,24 +480,7 @@
 .booked {
     color: red !important; 
     background-color: #cccccc !important;
-  }
-  .booked1 {
-    color: white !important; 
-    background-color: #575B5C !important;
-  }
-  .booked2 {
-    color: white !important; 
-    background-color: green !important;
-  }
-  .booked3 {
-    color: white !important; 
-    background-color: blue !important;
-  }
-  .booked4 {
-    color: white !important; 
-    background-color: purple !important;
-  }
-  
+  }  
   .table.reserve {
     background-color:#575B5C !important;
     color: #fff !important;
@@ -514,6 +497,7 @@
     background-color: purple !important;
     color: #fff !important;
 }
+
 .table.removing {
     border-color: #f00 !important;
     border-width: 3px !important;

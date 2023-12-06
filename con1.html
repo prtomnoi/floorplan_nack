@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Concert Plan</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,81 +21,81 @@
           <div class="table-layout">
             <div class="box1">
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between":class="['table', { booked: isActive('C8') }]" :class="table" data-id="C8"><span>C8</span><span>C7</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C6') }]" data-id="C6">C6</a>
+                <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('C8')]: getClassForTable('C8') }]" data-id="C8"><span>C8</span><span>C7</span></a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C6')]: getClassForTable('C6') }]" data-id="C6">C6</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C14') }]"
-                  data-id="C14"><span>C14</span><span>C13</span></a>
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C14')]: getClassForTable('C14') }]"
+                data-id="C14"><span>C14</span><span>C13</span></a>
                 <a href="#" class="table" :class="['table', { booked: isActive('C12') }]" data-id="C12">C12</a>
               </div>
 
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C17') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C17')]: getClassForTable('C17') }]"
                   data-id="C17"><span>C17</span><span>C16</span></a>
-                <a href="#" class="table" data-id="C15" :class="['table', { booked: isActive('C15') }]">C15</a>
+                <a href="#" class="table" data-id="C15" :class="[{ [getClassForTable('C15')]: getClassForTable('C15') }]">C15</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C23') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C23')]: getClassForTable('C23') }]"
                   data-id="C23"><span>C23</span><span>C22</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C21') }]" data-id="21">C21</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C21')]: getClassForTable('C21') }]" data-id="21">C21</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C29') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C29')]: getClassForTable('C29') }]"
                   data-id="C29"><span>C29</span><span>C28</span></a>
-                <a href="#" class="table"  :class="['table', { booked: isActive('C27') }]"data-id="C27">C27</a>
+                <a href="#" class="table"  :class="[{ [getClassForTable('C27')]: getClassForTable('C27') }]"data-id="C27">C27</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table" :class="['table', { booked: isActive('C36') }]" data-id="C36">C36</a>
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C35') }]"
+                <a href="#" class="table" :class="[{ [getClassForTable('C36')]: getClassForTable('C36') }]" data-id="C36">C36</a>
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C35')]: getClassForTable('C35') }]"
                   data-id="C35"><span>C35</span><span>C34</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C33') }]" data-id="C33">C33</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C33')]: getClassForTable('C33') }]" data-id="C33">C33</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table" :class="['table', { booked: isActive('C43') }]" data-id="C43">C43</a>
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C42') }]"
+                <a href="#" class="table" :class="[{ [getClassForTable('C43')]: getClassForTable('C43') }]" data-id="C43">C43</a>
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C42')]: getClassForTable('C42') }]"
                   data-id="C42"><span>C42</span><span>C41</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C40') }]" data-id="C40">C40</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C40')]: getClassForTable('C40') }]" data-id="C40">C40</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table" :class="['table', { booked: isActive('C47') }]" data-id="C47">C47</a>
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C46') }]"
+                <a href="#" class="table" :class="[{ [getClassForTable('C47')]: getClassForTable('C47') }]" data-id="C47">C47</a>
+                <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('C46')]: getClassForTable('C46') }]"
                   data-id="C46"><span>C46</span><span>C45</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C44') }]" data-id="C44">C44</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C44')]: getClassForTable('C44') }]" data-id="C44">C44</a>
               </div>
             </div>
             <div class="box2">
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table" :class="['table', { booked: isActive('C54') }]" data-id="C54">C54</a>
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C53') }]"
+                <a href="#" class="table" :class="[{ [getClassForTable('C54')]: getClassForTable('C54') }]"data-id="C54">C54</a>
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C53')]: getClassForTable('C53') }]"
                   data-id="C53"><span>C53</span><span>C52</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C51') }]" data-id="C51">C51</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C51')]: getClassForTable('C51') }]" data-id="C51">C51</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table" :class="['table', { booked: isActive('C61') }]" data-id="C61">C61</a>
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C60') }]"
+                <a href="#" class="table" :class="[{ [getClassForTable('C61')]: getClassForTable('C61') }]" data-id="C61">C61</a>
+                <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('C60')]: getClassForTable('C60') }]"
                   data-id="C60"><span>C60</span><span>C59</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C58') }]" data-id="C58">C58</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C58')]: getClassForTable('C58') }]" data-id="C58">C58</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C66') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C66')]: getClassForTable('C66') }]"
                   data-id="C66"><span>C66</span><span>C65</span></a>
               </div>
             </div>
             <div class="box3">
               <div class="d-flex align-items-end gap-2">
-                <a href="#" class="table" :class="['table', { booked: isActive('C1') }]" data-id="C1">C1</a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C2') }]" data-id="C2">C2</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C1')]: getClassForTable('C1') }]" data-id="C1">C1</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C2')]: getClassForTable('C2') }]" data-id="C2">C2</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C5') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('C5')]: getClassForTable('C5') }]"
                   data-id="C5"><span>C5</span><span>C4</span></a>
-                <a href="#" class="table"  :class="['table', { booked: isActive('C3') }]"data-id="C3">C3</a>
+                <a href="#" class="table"  :class="[{ [getClassForTable('C3')]: getClassForTable('C3') }]"data-id="C3">C3</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C11') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C11')]: getClassForTable('C11') }]"
                   data-id="C11"><span>C11</span><span>C10</span></a>
-                  <a href="#" class="table" :class="['table', { booked3: isActive('C9') }]" @click="handleTableClick('C9')" data-id="C9">C9</a>
+                  <a href="#" class="table":class="[{ [getClassForTable('C9')]: getClassForTable('C9') }]" data-id="C9">C9</a>
               </div>
               <div class="d-flex flex-column justify-content-end">
                 <div class="tv text-center">
@@ -103,24 +103,24 @@
                 </div>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C20') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C20')]: getClassForTable('C20') }]"
                   data-id="C20"><span>C20</span><span>C19</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C18') }]" data-id="C18">C18</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C18')]: getClassForTable('C18') }]" data-id="C18">C18</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C26') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C26')]: getClassForTable('C26') }]"
                   data-id="C26"><span>C26</span><span>C25</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C24') }]" data-id="C24">C24</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C24')]: getClassForTable('C24') }]" data-id="C24">C24</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C32') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C32')]: getClassForTable('C31') }]"
                   data-id="32"><span>C32</span><span>C31</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C30') }]" data-id="30">C30</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C30')]: getClassForTable('C30') }]" data-id="30">C30</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between":class="['table', { booked4: isActive('C39') }]" @click="handleTableClick('C39')"
+                <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('C39')]: getClassForTable('C39') }]"
                   data-id="C39"><span>C39</span><span>C38</span></a>
-                <a href="#" class="table"  :class="['table', { booked: isActive('C37') }]"data-id="C37">C37</a>
+                <a href="#" class="table"  :class="[{ [getClassForTable('C37')]: getClassForTable('C37') }]"data-id="C37">C37</a>
               </div>
               <div class="d-flex flex-column justify-content-end">
                 <div class="tv text-center">
@@ -130,22 +130,22 @@
             </div>
             <div class="box4">
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C50') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('C50')]: getClassForTable('C50') }]"
                   data-id="C50"><span>C50</span><span>C49</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C48') }]" data-id="C48">C48</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C48')]: getClassForTable('C48') }]" data-id="C48">C48</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C57') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C57')]: getClassForTable('C57') }]"
                   data-id="C57"><span>C57</span><span>C56</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C55') }]" data-id="C55">C55</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C55')]: getClassForTable('C55') }]" data-id="C55">C55</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C64') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C64')]: getClassForTable('C64') }]"
                   data-id="64"><span>C64</span><span>C63</span></a>
-                <a href="#" class="table" :class="['table', { booked: isActive('C62') }]" data-id="C62">C62</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('C62')]: getClassForTable('C62') }]" data-id="C62">C62</a>
               </div>
               <div class="d-flex flex-column justify-content-end gap-2">
-                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('C68') }]"
+                <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('C68')]: getClassForTable('C68') }]"
                   data-id="C68"><span>C68</span><span>C67</span></a>
               </div>
             </div>
@@ -157,257 +157,257 @@
             <div class="zone-title">zone b</div>
             <div class="d-flex flex-column gap-2">
               <div class="empty-box"></div>
-              <a href="#" class="table" :class="['table', { booked: isActive('S5') }]" data-id="S5">S5</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('S5')]: getClassForTable('S5') }]" data-id="S5">S5</a>
             </div>
             <div class="d-flex flex-column gap-2">
               <div class="empty-box"></div>
-              <a href="#" class="table" :class="['table', { booked: isActive('S4') }]" data-id="S4">S4</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('S4')]: getClassForTable('S4') }]" data-id="S4">S4</a>
             </div>
             <div class="d-flex flex-column gap-2">
               <div class="empty-box"></div>
-              <a href="#" class="table" :class="['table', { booked: isActive('S3') }]" data-id="S3">S3</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('S3')]: getClassForTable('S3') }]" data-id="S3">S3</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table"  :class="['table', { booked: isActive('S2') }]" data-id="S2">S2</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('S1') }]" data-id="S1">S1</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('S2')]: getClassForTable('S2') }]" data-id="S2">S2</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('S1')]: getClassForTable('S1') }]" data-id="S1">S1</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('B5') }]" data-id="B5">B5</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B4') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('B5')]: getClassForTable('B5') }]" data-id="B5">B5</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('B4')]: getClassForTable('B4') }]"
                 data-id="B4"><span>B4</span><span>B3</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B2') }]" data-id="B2">B2</a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('B1') }]"data-id="B1">B1</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B2')]: getClassForTable('B2') }]" data-id="B2">B2</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B1')]: getClassForTable('B1') }]"data-id="B1">B1</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table"  :class="['table', { booked: isActive('B10') }]"data-id="B10">B10</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('B10')]: getClassForTable('B10') }]"data-id="B10">B10</a>
               <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B9') }]"
                 data-id="B9"><span>B9</span><span>B8</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B7') }]" data-id="B7">B7</a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('B6') }]" data-id="B6">B6</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B7')]: getClassForTable('B7') }]" data-id="B7">B7</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('B6')]: getClassForTable('B6') }]" data-id="B6">B6</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('B15') }]" data-id="B15">B15</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between":class="['table', { booked: isActive('B14') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('B15')]: getClassForTable('B15') }]" data-id="B15">B15</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('B14')]: getClassForTable('B14') }]"
                 data-id="B14"><span>B14</span><span>B13</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B12') }]" data-id="B12">B12</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B11') }]"data-id="B11">B11</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B12')]: getClassForTable('B12') }]" data-id="B12">B12</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B11')]: getClassForTable('B11') }]"data-id="B11">B11</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table":class="['table', { booked: isActive('B20') }]" data-id="B20">B20</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B19') }]"
+              <a href="#" class="table":class="[{ [getClassForTable('B20')]: getClassForTable('B20') }]" data-id="B20">B20</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('B19')]: getClassForTable('B19') }]"
                 data-id="B19"><span>B19</span><span>B18</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B17') }]" data-id="B17">B17</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B16') }]" data-id="B16">B16</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B17')]: getClassForTable('B17') }]" data-id="B17">B17</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B16')]: getClassForTable('B16') }]" data-id="B16">B16</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('B25') }]" data-id="B25">B25</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B24') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('B25')]: getClassForTable('B25') }]" data-id="B25">B25</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('B24')]: getClassForTable('B24') }]"
                 data-id="B24"><span>B24</span><span>B23</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B22') }]" data-id="B22">B22</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B21') }]" data-id="B21">B21</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B22')]: getClassForTable('B22') }]"data-id="B22">B22</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B21')]: getClassForTable('B21') }]" data-id="B21">B21</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('B30') }]" data-id="B30">B30</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B29') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('B30')]: getClassForTable('B30') }]" data-id="B30">B30</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('B29')]: getClassForTable('B29') }]"
                 data-id="B29"><span>B29</span><span>B28</span></a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('B27') }]" data-id="B27">B27</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B26') }]" data-id="B26">B26</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('B27')]: getClassForTable('B27') }]" data-id="B27">B27</a>
+              <a href="#" class="table":class="[{ [getClassForTable('B26')]: getClassForTable('B26') }]" data-id="B26">B26</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('B35') }]" data-id="B35">B35</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B34') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('B35')]: getClassForTable('B35') }]" data-id="B35">B35</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('B33')]: getClassForTable('B33') }]"
                 data-id="B34"><span>B34</span><span>B33</span></a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('B32') }]" data-id="B32">B32</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B31') }]" data-id="B31">B31</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('B32')]: getClassForTable('B32') }]" data-id="B32">B32</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B31')]: getClassForTable('B31') }]" data-id="B31">B31</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('B40') }]" data-id="B40">B40</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('B39') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('B40')]: getClassForTable('B40') }]" data-id="B40">B40</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('B39')]: getClassForTable('B39') }]"
                 data-id="B39"><span>B39</span><span>B38</span></a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('B37') }]" data-id="B37">B37</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('B36') }]" data-id="B36">B36</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('B37')]: getClassForTable('B37') }]" data-id="B37">B37</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B36')]: getClassForTable('B36') }]" data-id="B36">B36</a>
             </div>
             <div class="d-flex flex-column gap-2 justify-content-end">
-              <a href="#" class="table" :class="['table', { booked: isActive('B41') }]" data-id="B41">B41</a>
+              <a href="#" class="table":class="[{ [getClassForTable('B41')]: getClassForTable('B41') }]" data-id="B41">B41</a>
             </div>
           </div>
           <div class="zone-a">
             <div class="zone-title">zone a</div>
             <div class="d-flex flex-column gap-2 justify-content-end ms-1 me-4">
-              <a href="#" class="table" :class="['table', { booked: isActive('F5') }]" data-id="F5">F5</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('F5')]: getClassForTable('F5') }]" data-id="F5">F5</a>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-2 justify-content-end me-4"> 
-              <a href="#" class="table" :class="['table', { booked: isActive('F4') }]"  data-id="F4">F4</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('F4')]: getClassForTable('F4') }]" data-id="F4">F4</a>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A8') }]" 
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A8')]: getClassForTable('A8') }]"
                 data-id="A8"><span>A8</span><span>A7</span></a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('A6') }]" data-id="A6">A6</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A5') }]" 
+              <a href="#" class="table"  :class="[{ [getClassForTable('A6')]: getClassForTable('A6') }]" data-id="A6">A6</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A5')]: getClassForTable('A5') }]"
                 data-id="A5"><span>A5</span><span>A4</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A3') }]"  data-id="A3">A3</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between":class="['table', { booked: isActive('A2') }]" 
+              <a href="#" class="table" :class="[{ [getClassForTable('A3')]: getClassForTable('A3') }]"  data-id="A3">A3</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('A2')]: getClassForTable('A2') }]"
                 data-id="A2"><span>A2</span><span>A1</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('F3') }]"  data-id="F3">F3</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('F2') }]"  data-id="F2">F2</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('F3')]: getClassForTable('F3') }]" data-id="F3">F3</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('F2')]: getClassForTable('F2') }]"  data-id="F2">F2</a>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A16') }]" 
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A16')]: getClassForTable('A16') }]"
                 data-id="A16"><span>A16</span><span>A15</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A14') }]"  data-id="A14">A14</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A13') }]" 
+              <a href="#" class="table" :class="[{ [getClassForTable('A14')]: getClassForTable('A14') }]"  data-id="A14">A14</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A13')]: getClassForTable('A13') }]"
                 data-id="A13"><span>A13</span><span>A12</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A11') }]"  data-id="A11">A11</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A10') }]" 
+              <a href="#" class="table":class="[{ [getClassForTable('A11')]: getClassForTable('A11') }]"  data-id="A11">A11</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A10')]: getClassForTable('A10') }]"
                 data-id="A10"><span>A10</span><span>A9</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('F1') }]"  data-id="F1">F1</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('F1')]: getClassForTable('F1') }]" data-id="F1">F1</a>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="['table', { booked: isActive('A24') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A24')]: getClassForTable('A24') }]"
                 data-id="A24"><span>A24</span><span>A23</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A22') }]" data-id="A22">A22</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between":class="['table', { booked: isActive('A21') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('A22')]: getClassForTable('A22') }]" data-id="A22">A22</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between":class="[{ [getClassForTable('A21')]: getClassForTable('A21') }]"
                 data-id="A21"><span>A21</span><span>A20</span></a>
 
               <a href="#" class="table"  :class="['table', { booked: isActive('A19') }]" data-id="A19">A19</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A18') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A19')]: getClassForTable('A19') }]"
                 data-id="A18"><span>A18</span><span>A17</span></a>
 
               <div class="empty-box"></div>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A32') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A32')]: getClassForTable('A32') }]"
                 data-id="A32"><span>A32</span><span>A31</span></a>
               <a href="#" class="table" :class="['table', { booked: isActive('A30') }]" data-id="A30">A30</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A29') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A29')]: getClassForTable('A29') }]"
                 data-id="A29"><span>A29</span><span>A28</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A27') }]" data-id="A27">A27</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A26') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('A27')]: getClassForTable('A27') }]" data-id="A27">A27</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A26')]: getClassForTable('A26') }]"
                 data-id="A26"><span>A26</span><span>A25</span></a>
 
               <div class="empty-box"></div>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A40') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A40')]: getClassForTable('A40') }]"
                 data-id="A40"><span>A40</span><span>A39</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A38') }]" data-id="A38">A38</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A37') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('A38')]: getClassForTable('A38') }]" data-id="A38">A38</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A37')]: getClassForTable('A37') }]"
                 data-id="A37"><span>A37</span><span>A36</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A35') }]" data-id="A35">A35</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A34') }]" 
+              <a href="#" class="table" :class="[{ [getClassForTable('A35')]: getClassForTable('A35') }]" data-id="A35">A35</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A34')]: getClassForTable('A34') }]"
                 data-id="A34"><span>A34</span><span>A33</span></a>
 
               <div class="empty-box"></div>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A48') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A48')]: getClassForTable('A48') }]"
                 data-id="A48"><span>A48</span><span>A47</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A46') }]" data-id="A46">A46</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A45') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('A46')]: getClassForTable('A46') }]" data-id="A46">A46</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A45')]: getClassForTable('A45') }]"
                 data-id="A45"><span>A45</span><span>A44</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A43') }]" data-id="A43">A43</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A42') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('A43')]: getClassForTable('A43') }]" data-id="A43">A43</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A42')]: getClassForTable('A42') }]"
                 data-id="A42"><span>A42</span><span>A41</span></a>
 
               <div class="empty-box"></div>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A56') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A56')]: getClassForTable('A56') }]"
                 data-id="A56"><span>A56</span><span>A55</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A54') }]" data-id="A54">A54</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A53') }]"
+              <a href="#" class="table" :class="[{ [getClassForTable('A54')]: getClassForTable('A54') }]" data-id="A54">A54</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="[{ [getClassForTable('A53')]: getClassForTable('A53') }]"
                 data-id="A53"><span>A53</span><span>A52</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A51') }]" data-id="A51">A51</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A50') }]"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A51')]: getClassForTable('A51') }]" data-id="A51">A51</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A50')]: getClassForTable('A50') }]"
                 data-id="A50"><span>A50</span><span>A49</span></a>
 
               <div class="empty-box"></div>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A64') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A64')]: getClassForTable('A64') }]"
                 data-id="A64"><span>A64</span><span>A63</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A62') }]" data-id="A62">A62</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked1: isActive('A61') }]" @click="handleTableClick('A61')"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A62')]: getClassForTable('A62') }]" data-id="A62">A62</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A61')]: getClassForTable('A61') }]"
                 data-id="A61"><span>A61</span><span>A60</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A59') }]" data-id="A59">A59</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A58') }]"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A59')]: getClassForTable('A59') }]" data-id="A59">A59</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"   :class="[{ [getClassForTable('A58')]: getClassForTable('A58') }]"
                 data-id="A58"><span>A58</span><span>A57</span></a>
 
               <div class="empty-box"></div>
               <div class="empty-box"></div>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A72') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A72')]: getClassForTable('A72') }]"
                 data-id="A72"><span>A72</span><span>A71</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A70') }]" data-id="A70">A70</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A69') }]"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A70')]: getClassForTable('A70') }]" data-id="A70">A70</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A69')]: getClassForTable('A69') }]"
                 data-id="A69"><span>A69</span><span>A68</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A67') }]" data-id="A67">A67</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A66') }]"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A67')]: getClassForTable('A67') }]" data-id="A67">A67</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A66')]: getClassForTable('A66') }]"
                 data-id="A66"><span>A66</span><span>A65</span></a>
 
               <div class="empty-box"></div>
-              <a href="#" class="table":class="['table', { booked: isActive('D1') }]" data-id="D1">D1</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('D1')]: getClassForTable('D1') }]" data-id="D1">D1</a>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A80') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A80')]: getClassForTable('A53') }]"
                 data-id="A80"><span>A80</span><span>A79</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A78') }]" data-id="A78">A78</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A77') }]"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A78')]: getClassForTable('A78') }]" data-id="A78">A78</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A77')]: getClassForTable('A77') }]"
                 data-id="A77"><span>A77</span><span>A76</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('A75') }]" data-id="A75">A75</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A74') }]"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A75')]: getClassForTable('A75') }]" data-id="A75">A75</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A74')]: getClassForTable('A74') }]"
                 data-id="A74"><span>A74</span><span>A73</span></a>
 
-              <a href="#" class="table" :class="['table', { booked: isActive('D3') }]" data-id="D3">D3</a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('D2') }]" data-id="D2">D2</a>
+              <a href="#" class="table" :class="[ {  [getClassForTable('D3')]: getClassForTable('D3') }]" data-id="D3">D3</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('D2')]: getClassForTable('D2') }]" data-id="D2">D2</a>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked2: isActive('A88') }]" @click="handleTableClick('A88')"
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A88')]: getClassForTable('A88') }]" 
                 data-id="A88"><span>A88</span><span>A87</span></a>
-              <a href="#" class="table" :class="['table', { booked: isActive('A86') }]" data-id="A86">A86</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked: isActive('A85') }]"
+              <a href="#" class="table"  :class="[{ [getClassForTable('A86')]: getClassForTable('A86') }]" data-id="A86">A86</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A85')]: getClassForTable('A85') }]"
                 data-id="A85"><span>A85</span><span>A84</span></a>
 
-              <a href="#" class="table"  :class="['table', { booked: isActive('A83') }]"  data-id="A83">A83</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="['table', { booked: isActive('A82') }]"
+              <a href="#" class="table"   :class="[{ [getClassForTable('A83')]: getClassForTable('A83') }]"  data-id="A83">A83</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"   :class="[{ [getClassForTable('A82')]: getClassForTable('A82') }]"
                 data-id="A82"><span>A82</span><span>A81</span></a>
 
-              <a href="#" class="table"  :class="['table', { booked: isActive('D5') }]" data-id="D5">D5</a>
-              <a href="#" class="table"  :class="['table', { booked2: isActive('D4') }]" @click="handleTableClick('D4')" data-id="D4">D4</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('D5')]: getClassForTable('D5') }]" data-id="D5">D5</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('D4')]: getClassForTable('D4') }]" @click="handleTableClick('D4')" data-id="D4">D4</a>
             </div>
             <div class="d-flex flex-column gap-1">
-              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="['table', { booked: isActive('A96') }]"
+              <a href="#" class="table-l d-flex flex-column justify-content-between"   :class="[{ [getClassForTable('A96')]: getClassForTable('A96') }]"
                 data-id="A96"><span>A96</span><span>A95</span></a>
-              <a href="#" class="table"  :class="['table', { booked: isActive('A94') }]" data-id="A94">A94</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="['table', { booked: isActive('A93') }]"
+              <a href="#" class="table"   :class="[{ [getClassForTable('A94')]: getClassForTable('A94') }]" data-id="A94">A94</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"   :class="[{ [getClassForTable('A93')]: getClassForTable('A93') }]"
                 data-id="A93"><span>A93</span><span>A92</span></a>
 
-              <a href="#" class="table"  :class="['table', { booked: isActive('A91') }]" data-id="A91">A91</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between" :class="['table', { booked3: isActive('A90') }]" @click="handleTableClick('A90')"
+              <a href="#" class="table"   :class="[{ [getClassForTable('A91')]: getClassForTable('A91') }]" data-id="A91">A91</a>
+              <a href="#" class="table-l d-flex flex-column justify-content-between"  :class="[{ [getClassForTable('A90')]: getClassForTable('A90') }]"
                 data-id="A90"><span>A90</span><span>A89</span></a>
 
-              <a href="#" class="table"  :class="['table', { booked: isActive('D7') }]" data-id="D7">D7</a>
-              <a href="#" class="table"   :class="['table', { booked: isActive('D6') }]"data-id="D6">D6</a>
+              <a href="#" class="table"   :class="[{ [getClassForTable('D7')]: getClassForTable('D7') }]" data-id="D7">D7</a>
+              <a href="#" class="table"    :class="[{ [getClassForTable('D6')]: getClassForTable('D6') }]"data-id="D6">D6</a>
             </div>
           </div>
           <div class="stage">
@@ -420,32 +420,32 @@
               <div class="d-flex">
                 <div class="d-flex flex-column gap-2 ms-4">
                   <div class="empty-box"></div>
-                  <a href="#" class="table"  :class="['table', { booked: isActive('vvip10') }]" data-id="vvip10">10</a>
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip8') }]" data-id="vvip8">8</a>
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip6') }]" data-id="vvip6">6</a>
+                  <a href="#" class="table"   :class="[{ [getClassForTable('vvip10')]: getClassForTable('vvip10') }]" data-id="vvip10">10</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip8')]: getClassForTable('vvip8') }]"data-id="vvip8">8</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip6')]: getClassForTable('vvip6') }]" data-id="vvip6">6</a>
                 </div>
                 <div class="d-flex flex-column ms-3">
                   <a href="#" class="table" class="['table', { booked: isActive('vvip11') }]"  data-id="vvip11">11</a>
                 </div>
                 <div class="d-flex flex-column justify-content-end gap-2">
                   <div class="empty-box"></div>
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip9') }]" data-id="vvip9">9</a>
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip7') }]" data-id="vvip7">7</a>
-                  <a href="#" class="table"  class="['table', { booked: isActive('vvip5') }]"data-id="vvip5">5</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip9')]: getClassForTable('vvip9') }]" data-id="vvip9">9</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip7')]: getClassForTable('vvip7') }]" data-id="vvip7">7</a>
+                  <a href="#" class="table"  :class="[{ [getClassForTable('vvip5')]: getClassForTable('vvip5') }]"data-id="vvip5">5</a>
                 </div>
               </div>
               <div class="vvip-label">vvip</div>
               <div class="d-flex h-100">
                 <div class="d-flex flex-column gap-2 ms-4">
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip4') }]" data-id="vvip4">4</a>
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip2') }]" data-id="vvip2">2</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip4')]: getClassForTable('vvip4') }]" data-id="vvip4">4</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip2')]: getClassForTable('vvip2') }]" data-id="vvip2">2</a>
                 </div>
                 <div class="d-flex flex-column ms-3">
                   <div class="empty-box"></div>
                 </div>
                 <div class="d-flex flex-column justify-content-end gap-2">
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip3') }]" data-id="vvip3">3</a>
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip1') }]" data-id="vvip1">1</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip3')]: getClassForTable('vvip3') }]" data-id="vvip3">3</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip1')]: getClassForTable('vvip1') }]" data-id="vvip1">1</a>
                 </div>
               </div>
             </div>
@@ -464,36 +464,36 @@
             </div>
           </div>
           <div class="d-flex gap-2">
-            <a href="#" class="table align-self-end" class="['table', { booked: isActive('bar1') }]" data-id="bar1">1</a>
-            <a href="#" class="table align-self-end" class="['table', { booked: isActive('bar2') }]" data-id="bar2">2</a>
-            <a href="#" class="table align-self-end" class="['table', { booked: isActive('bar3') }]"data-id="bar3">3</a>
-            <a href="#" class="table align-self-end"class="['table', { booked: isActive('bar4') }]" data-id="bar4">4</a>
-            <a href="#" class="table align-self-end" class="['table', { booked: isActive('bar5') }]"data-id="bar5">5</a>
-            <a href="#" class="table align-self-end"class="['table', { booked: isActive('bar6') }]"data-id="bar6">6</a>
-            <a href="#" class="table align-self-end"class="['table', { booked: isActive('bar7') }]"data-id="bar7">7</a>
-            <a href="#" class="table align-self-end"class="['table', { booked: isActive('bar8') }]"data-id="bar8">8</a>
+            <a href="#" class="table align-self-end" :class="[{ [getClassForTable('bar1')]: getClassForTable('bar1') }]" data-id="bar1">1</a>
+            <a href="#" class="table align-self-end" :class="[{ [getClassForTable('bar2')]: getClassForTable('bar2') }]" data-id="bar2">2</a>
+            <a href="#" class="table align-self-end" :class="[{ [getClassForTable('bar3')]: getClassForTable('bar3') }]"data-id="bar3">3</a>
+            <a href="#" class="table align-self-end":class="[{ [getClassForTable('bar4')]: getClassForTable('bar4') }]"data-id="bar4">4</a>
+            <a href="#" class="table align-self-end" :class="[{ [getClassForTable('bar5')]: getClassForTable('bar5') }]"data-id="bar5">5</a>
+            <a href="#" class="table align-self-end":class="[{ [getClassForTable('bar6')]: getClassForTable('bar6') }]"data-id="bar6">6</a>
+            <a href="#" class="table align-self-end":class="[{ [getClassForTable('bar7')]: getClassForTable('bar7') }]"data-id="bar7">7</a>
+            <a href="#" class="table align-self-end":class="[{ [getClassForTable('bar8')]: getClassForTable('bar8') }]"data-id="bar8">8</a>
           </div>
         </div>
         <div class="zone-pink mb-2">
           <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" class="['table', { booked: isActive('E2') }]" data-id="E2">E2</a>
-            <a href="#" class="table" class="['table', { booked: isActive('E1') }]"data-id="E1">E1</a>
+            <a href="#" class="table" :class="[{ [getClassForTable('E2')]: getClassForTable('E2') }]" data-id="E2">E2</a>
+            <a href="#" class="table" :class="[{ [getClassForTable('E1')]: getClassForTable('E1') }]"data-id="E1">E1</a>
           </div>
           <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" class="['table', { booked: isActive('E4') }]" data-id="E4">E4</a>
-            <a href="#" class="table" class="['table', { booked: isActive('E3') }]" data-id="E3">E3</a>
+            <a href="#" class="table" :class="[{ [getClassForTable('E4')]: getClassForTable('E4') }]" data-id="E4">E4</a>
+            <a href="#" class="table"  :class="[{ [getClassForTable('E3')]: getClassForTable('E3') }]" data-id="E3">E3</a>
           </div>
           <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" class="['table', { booked: isActive('E6') }]" data-id="E6">E6</a>
-            <a href="#" class="table"class="['table', { booked: isActive('E5') }]" data-id="E5">E5</a>
+            <a href="#" class="table"  :class="[{ [getClassForTable('E6')]: getClassForTable('E6') }]" data-id="E6">E6</a>
+            <a href="#" class="table" :class="[{ [getClassForTable('E5')]: getClassForTable('E5') }]" data-id="E5">E5</a>
           </div>
           <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table"  class="['table', { booked: isActive('E8') }]" data-id="E8">E8</a>
-            <a href="#" class="table" class="['table', { booked: isActive('E7') }]"data-id="E7">E7</a>
+            <a href="#" class="table"   :class="[{ [getClassForTable('E8')]: getClassForTable('E8') }]" data-id="E8">E8</a>
+            <a href="#" class="table"  :class="[{ [getClassForTable('E7')]: getClassForTable('E7') }]"data-id="E7">E7</a>
           </div>
           <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" class="['table', { booked: isActive('E10') }]" data-id="E10">E10</a>
-            <a href="#" class="table" :class="['table', { booked: isActive('E9') }]" @click="handleTableClick('E9')"data-id="E9" >E9</a>
+            <a href="#" class="table"  :class="[{ [getClassForTable('E10')]: getClassForTable('E10') }]" data-id="E10">E10</a>
+            <a href="#" class="table"  :class="[{ [getClassForTable('E9')]: getClassForTable('E9') }]" data-id="E9" >E9</a>
           </div>
         </div>
         <div class="toilet">
@@ -537,16 +537,14 @@
           <img src="8059.jpg" width="100" alt="">
           <div class="zone-pink mb-2">
             <div class="d-flex flex-column justify-content-end gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('E11') }]"
-                @click="handleTableClick('E11')" data-id="E11">E11</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('E12') }]"
-                @click="handleTableClick('E12')"data-id="E12">E12</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('E11')]: getClassForTable('E11') }]"
+                 data-id="E11">E11</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('E12')]: getClassForTable('E12') }]"
+                data-id="E12">E12</a>
             </div>
             <div class="d-flex flex-column justify-content-end gap-2">
-              <a href="#" class="table" :class="['table', { booked: isActive('E13') }]"
-                @click="handleTableClick('E13')"data-id="E13">E13</a>
-              <a href="#" class="table" :class="['table', { booked: isActive('E14') }]"
-                @click="handleTableClick('E14')" data-id="E14">E14</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('E2')]: getClassForTable('E13') }]"data-id="E13">E13</a>
+              <a href="#" class="table"  :class="[{ [getClassForTable('E2')]: getClassForTable('E14') }]" data-id="E14">E14</a>
             </div>
 
           </div>
@@ -687,256 +685,14 @@
           bookingInfo: {
           date: "2023-12-11",
           tables: [
-            // {"table": "A1"},
-            // {"table": "A2"},
-            // {"table": "A3"},
-            // {"table": "A4"},
-            // {"table": "A5"},
-            // {"table": "A6"},
-            // {"table": "A7"},
-            // {"table": "A8"},
-            // {"table": "A9"},
-            // {"table": "A10"},
-            // {"table": "A11"},
-            // {"table": "A12"},
-            // {"table": "A13"},
-            // {"table": "A14"},
-            // {"table": "A15"},
-            // {"table": "A16"},
-            // {"table": "A17"},
-            // {"table": "A18"},
-            // {"table": "A19"},
-            // {"table": "A20"},
-            // {"table": "A21"},
-            // {"table": "A22"},
-            // {"table": "A23"},
-            // {"table": "A24"},
-            // {"table": "A25"},
-            // {"table": "A26"},
-            // {"table": "A27"},
-            // {"table": "A28"},
-            // {"table": "A29"},
-            // {"table": "A30"},
-            // {"table": "A31"},
-            // {"table": "A32"},
-            // {"table": "A33"},
-            // {"table": "A34"},
-            // {"table": "A35"},
-            // {"table": "A36"},
-            // {"table": "A37"},
-            // {"table": "A38"},
-            // {"table": "A39"},
-            // {"table": "A40"},
-            // {"table": "A41"},
-            // {"table": "A42"},
-            // {"table": "A43"},
-            // {"table": "A44"},
-            // {"table": "A45"},
-            // {"table": "A46"},
-            // {"table": "A47"},
-            // {"table": "A48"},
-            // {"table": "A49"},
-            // {"table": "A50"},
-            // {"table": "A51"},
-            // {"table": "A52"},
-            // {"table": "A53"},
-            // {"table": "A54"},
-            // {"table": "A55"},
-            // {"table": "A56"},
-            // {"table": "A57"},
-            // {"table": "A58"},
-            // {"table": "A59"},
-            // {"table": "A60"},
-                {"table": "A61"},
-            // {"table": "A62"},
-            // {"table": "A63"},
-            // {"table": "A64"},
-            // {"table": "A65"},
-            // {"table": "A66"},
-            // {"table": "A67"},
-            // {"table": "A68"},
-            // {"table": "A69"},
-            // {"table": "A70"},
-            // {"table": "A71"},
-            // {"table": "A72"},
-            // {"table": "A73"},
-            // {"table": "A74"},
-            // {"table": "A75"},
-            // {"table": "A76"},
-            // {"table": "A77"},
-            // {"table": "A78"},
-            // {"table": "A79"},
-            // {"table": "A80"},
-            // {"table": "A81"},
-            // {"table": "A82"},
-            // {"table": "A83"},
-            // {"table": "A84"},
-            // {"table": "A85"},
-            // {"table": "A86"},
-            // {"table": "A87"},
-            {"table": "A88"},
-            // {"table": "A89"},
-            {"table": "A90"},
-            // {"table": "A91"},
-            // {"table": "A92"},
-            // {"table": "A93"},
-            // {"table": "A94"},
-            // {"table": "A95"},
-            // {"table": "A96"},
-            // {"table": "B1"},
-            // {"table": "B2"},
-            // {"table": "B3"},
-            // {"table": "B4"},
-            // {"table": "B5"},
-            // {"table": "B6"},
-            // {"table": "B7"},
-            // {"table": "B8"},
-            // {"table": "B9"},
-            // {"table": "B10"},
-            // {"table": "B11"},
-            // {"table": "B12"},
-            // {"table": "B13"},
-            // {"table": "B14"},
-            // {"table": "B15"},
-            // {"table": "B16"},
-            // {"table": "B17"},
-            // {"table": "B18"},
-            // {"table": "B19"},
-            // {"table": "B20"},
-            // {"table": "B21"},
-            // {"table": "B22"},
-            // {"table": "B23"},
-            // {"table": "B24"},
-            // {"table": "B25"},
-            // {"table": "B26"},
-            // {"table": "B27"},
-            // {"table": "B28"},
-            // {"table": "B29"},
-            // {"table": "B30"},
-            // {"table": "B31"},
-            // {"table": "B32"},
-            // {"table": "B33"},
-            // {"table": "B34"},
-            // {"table": "B35"},
-            // {"table": "B36"},
-            // {"table": "B37"},
-            // {"table": "B38"},
-            // {"table": "B39"},
-            // {"table": "B40"},
-            // {"table": "B41"},
-            // {"table": "C1"},
-            // {"table": "C2"},
-            // {"table": "C3"},
-            // {"table": "C4"},
-            // {"table": "C5"},
-               {"table": "C6"},
-            // {"table": "C7"},
-            // {"table": "C8"},
-               {"table": "C9"},
-            // {"table": "C10"},
-            // {"table": "C11"},
-            // {"table": "C12"},
-            // {"table": "C13"},
-            // {"table": "C14"},
-            // {"table": "C15"},
-            // {"table": "C16"},
-            // {"table": "C17"},
-            // {"table": "C18"},
-            // {"table": "C19"},
-            // {"table": "C20"},
-            // {"table": "C21"},
-            // {"table": "C22"},
-            // {"table": "C23"},
-            // {"table": "C24"},
-            // {"table": "C25"},
-            // {"table": "C26"},
-            // {"table": "C27"},
-            // {"table": "C28"},
-            // {"table": "C29"},
-            // {"table": "C30"},
-            // {"table": "C31"},
-            // {"table": "C32"},
-            // {"table": "C33"},
-            // {"table": "C34"},
-            // {"table": "C35"},
-            // {"table": "C36"},
-            // {"table": "C37"},
-            // {"table": "C38"},
-            {"table": "C39"},
-            // {"table": "C40"},
-            // {"table": "C41"},
-            // {"table": "C42"},
-            // {"table": "C43"},
-            // {"table": "C44"},
-            // {"table": "C45"},
-            // {"table": "C46"},
-            // {"table": "C47"},
-            // {"table": "C48"},
-            // {"table": "C49"},
-            // {"table": "C50"},
-            // {"table": "C51"},
-            // {"table": "C52"},
-            // {"table": "C53"},
-            // {"table": "C54"},
-            // {"table": "C55"},
-            // {"table": "C56"},
-            // {"table": "C57"},
-            // {"table": "C58"},
-            // {"table": "C59"},
-            // {"table": "C60"},
-            // {"table": "C61"},
-            // {"table": "C62"},
-            // {"table": "C63"},
-            // {"table": "C64"},
-            // {"table": "C65"},
-            // {"table": "C66"},
-            // {"table": "C67"},
-            // {"table": "C68"},
-            // {"table": "D1"},
-            // {"table": "D2"},
-            // {"table": "D3"},
-            {"table": "D4"},
-            // {"table": "D5"},
-            // {"table": "D6"},
-            // {"table": "D7"},
-            // {"table": "E1"},
-            // {"table": "E2"},
-            // {"table": "E3"},
-            // {"table": "E4"},
-            // {"table": "E5"},
-            // {"table": "E6"},
-            // {"table": "E7"},
-            // {"table": "E8"},
-            {"table": "E9"},
-            {"table": "E10"},
-            {"table": "E11"},
-            {"table": "E12"},
-            {"table": "E13"},
-            {"table": "E14"},
-            {"table": "F1"},
-            {"table": "F2"},
-            {"table": "F3"},
-            {"table": "F4"},
-            {"table": "F5"},
-            {"table": "S1"},
-            // {"table": "S2"},
-            // {"table": "S3"},
-            // {"table": "S4"},
-            // {"table": "S5"},
-            // {"table": "S6"},
-            // {"table": "S7"},
-            // {"table": "S8"},
-            // {"table": "VVIP1"},
-            // {"table": "VVIP2"},
-            // {"table": "VVIP3"},
-            // {"table": "VVIP4"},
-            // {"table": "VVIP5"},
-            // {"table": "VVIP6"},
-            // {"table": "VVIP7"},
-            // {"table": "VVIP8"},
-            // {"table": "VVIP9"},
-            // {"table": "VVIP10"},
-            
+            {"table": "B5", "bookedType": "C"},
+            {"table": "D2", "bookedType": "A"},
+            {"table": "D3", "bookedType": "B"},
+            {"table": "D4", "bookedType": "B"},
+            {"table": "D5" , "bookedType": "A"},
+            {"table": "S1" , "bookedType": "D"},
+            {"table": "E11" , "bookedType": "D"},
+            {"table": "B16" , "bookedType": "A"},
           ]
         }
       },
@@ -988,11 +744,11 @@
         const tableEl = document.querySelector(`[data-id="${tableID}"]`);
 
         console.log(tableID);
-        console.log(tableEl);
+        // console.log(tableEl);
 
         let radioChecked = Array.from(radioEl).find((radio) => radio.checked);
 
-        console.log(radioChecked);
+        // console.log(radioChecked);
 
         radioChecked.value == "p3"
           ? tableEl.classList.add("p3")
@@ -1018,9 +774,19 @@
         handleTableClick(table) {
             console.log("Table clicked:", table);
         },
-        // tableClass( _table ) {
-        //   return ['table', { booked: this.isActive('VVIP9') }];
-        // }
+        getClassForTable(table) {
+          const booking = this.bookingInfo.tables.find(bookedTable => bookedTable.table === table);
+          if (booking) {
+            switch (booking.bookedType) {
+              case 'A': return 'p1';
+              case 'B': return 'p2';
+              case 'C': return 'p3';
+              case 'D': return 'reserve';
+              default: return '';
+            }
+          }
+          return '';
+        }
       },
   
     });
