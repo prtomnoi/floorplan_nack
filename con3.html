@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 
@@ -83,8 +83,6 @@
                 <a href="#" class="table" :class="[{ [getClassForTable('C44')]: getClassForTable('C44') }]"
                   data-id="C44">C44</a>
               </div>
-            </div>
-            <div class="box2">
               <div class="d-flex flex-column justify-content-end gap-2">
                 <a href="#" class="table" :class="[{ [getClassForTable('C54')]: getClassForTable('C54') }]"
                   data-id="C54">C54</a>
@@ -108,7 +106,9 @@
                   :class="[{ [getClassForTable('C66')]: getClassForTable('C66') }]"
                   data-id="C66"><span>C66</span><span>C65</span></a>
               </div>
+              
             </div>
+            
             <div class="box3">
               <div class="d-flex align-items-end gap-2">
                 <a href="#" class="table" :class="[{ [getClassForTable('C1')]: getClassForTable('C1') }]"
@@ -130,7 +130,7 @@
                 <a href="#" class="table" :class="[{ [getClassForTable('C9')]: getClassForTable('C9') }]"
                   data-id="C9">C9</a>
               </div>
-              <div class="d-flex flex-column justify-content-end">
+              <div class="d-flex flex-column justify-content-start">
                 <div class="tv text-center">
                   <i class="bi bi-tv text-white fs-5"></i>
                 </div>
@@ -163,13 +163,12 @@
                 <a href="#" class="table" :class="[{ [getClassForTable('C37')]: getClassForTable('C37') }]"
                   data-id="C37">C37</a>
               </div>
-              <div class="d-flex flex-column justify-content-end">
+              <div class="d-flex flex-column justify-content-start">
                 <div class="tv text-center">
                   <i class="bi bi-tv text-white fs-5"></i>
                 </div>
+                
               </div>
-            </div>
-            <div class="box4">
               <div class="d-flex flex-column justify-content-end gap-2">
                 <a href="#" class="table-l d-flex flex-column justify-content-between"
                   :class="[{ [getClassForTable('C50')]: getClassForTable('C50') }]"
@@ -197,124 +196,122 @@
                   data-id="C68"><span>C68</span><span>C67</span></a>
               </div>
             </div>
+           
             <div class="box5"></div>
           </div>
         </div>
+        
         <div class="wrap-zone">
           <div class="zone-b">
             <div class="zone-title">zone b</div>
             <div class="d-flex flex-column gap-2">
-              <div class="empty-box"></div>
-              <a href="#" class="table" :class="[{ [getClassForTable('S5')]: getClassForTable('S5') }]"
-                data-id="S5">S5</a>
-            </div>
-            <div class="d-flex flex-column gap-2">
-              <div class="empty-box"></div>
-              <a href="#" class="table" :class="[{ [getClassForTable('S4')]: getClassForTable('S4') }]"
-                data-id="S4">S4</a>
-            </div>
-            <div class="d-flex flex-column gap-2">
-              <div class="empty-box"></div>
-              <a href="#" class="table" :class="[{ [getClassForTable('S3')]: getClassForTable('S3') }]"
-                data-id="S3">S3</a>
-            </div>
-            <div class="d-flex flex-column gap-2">
+                <a href="#" class="table" :class="[{ [getClassForTable('S8')]: getClassForTable('S8') }]"
+                  data-id="S8">S8</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('S7')]: getClassForTable('S7') }]"
+                  data-id="S7">S7</a>
+              </div><div class="d-flex flex-column gap-2">
+                <a href="#" class="table" :class="[{ [getClassForTable('S6')]: getClassForTable('S6') }]"
+                  data-id="S6">S6</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('S5')]: getClassForTable('S5') }]"
+                  data-id="S5">S5</a>
+              </div><div class="d-flex flex-column gap-2">
+                <a href="#" class="table" :class="[{ [getClassForTable('S4')]: getClassForTable('S4') }]"
+                  data-id="S4">S4</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('S3')]: getClassForTable('S3') }]"
+                  data-id="S3">S3</a>
+              </div>
+            <div class="d-flex flex-column gap-2" >
               <a href="#" class="table" :class="[{ [getClassForTable('S2')]: getClassForTable('S2') }]"
                 data-id="S2">S2</a>
               <a href="#" class="table" :class="[{ [getClassForTable('S1')]: getClassForTable('S1') }]"
                 data-id="S1">S1</a>
             </div>
-            <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B5')]: getClassForTable('B5') }]"
-                data-id="B5">B5</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="[{ [getClassForTable('B4')]: getClassForTable('B4') }]"
-                data-id="B4"><span>B4</span><span>B3</span></a>
+            <div class="d-flex flex-column gap-2" >  
+                <a href="#" class="table" :class="[{ [getClassForTable('B4')]: getClassForTable('B4') }]"
+                data-id="B4">B4</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B3')]: getClassForTable('B3') }]"
+                data-id="B3">B3</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B2')]: getClassForTable('B2') }]"
                 data-id="B2">B2</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B1')]: getClassForTable('B1') }]"
                 data-id="B1">B1</a>
             </div>
-            <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B10')]: getClassForTable('B10') }]"
-                data-id="B10">B10</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="['table', { booked: isActive('B9') }]" data-id="B9"><span>B9</span><span>B8</span></a>
+            <div class="d-flex flex-column gap-2" >
+                <a href="#" class="table" :class="[{ [getClassForTable('B8')]: getClassForTable('B8') }]"
+                data-id="B8">B8</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B7')]: getClassForTable('B7') }]"
                 data-id="B7">B7</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B6')]: getClassForTable('B6') }]"
                 data-id="B6">B6</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B5')]: getClassForTable('B5') }]"
+                data-id="B5">B5</a>
+                
             </div>
-            <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B15')]: getClassForTable('B15') }]"
-                data-id="B15">B15</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="[{ [getClassForTable('B14')]: getClassForTable('B14') }]"
-                data-id="B14"><span>B14</span><span>B13</span></a>
+            <div class="d-flex flex-column gap-2" style="margin-left: 20px;">
               <a href="#" class="table" :class="[{ [getClassForTable('B12')]: getClassForTable('B12') }]"
                 data-id="B12">B12</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B11')]: getClassForTable('B11') }]"
                 data-id="B11">B11</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B10')]: getClassForTable('B10') }]"
+                data-id="B10">B10</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B9')]: getClassForTable('B9') }]"
+                data-id="B9">B9</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B20')]: getClassForTable('B20') }]"
-                data-id="B20">B20</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="[{ [getClassForTable('B19')]: getClassForTable('B19') }]"
-                data-id="B19"><span>B19</span><span>B18</span></a>
-              <a href="#" class="table" :class="[{ [getClassForTable('B17')]: getClassForTable('B17') }]"
-                data-id="B17">B17</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B16')]: getClassForTable('B16') }]"
                 data-id="B16">B16</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B15')]: getClassForTable('B15') }]"
+                data-id="B15">B15</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B14')]: getClassForTable('B14') }]"
+                data-id="B14">B14</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B13')]: getClassForTable('B13') }]"
+                data-id="B13">B13</a>
+            </div>
+            <div class="d-flex flex-column gap-2" style="margin-left: 20px;">
+                <a href="#" class="table" :class="[{ [getClassForTable('B20')]: getClassForTable('B20') }]"
+                data-id="B20">B20</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B19')]: getClassForTable('B19') }]"
+                data-id="B19">B19</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B18')]: getClassForTable('B18') }]"
+                data-id="B18">B18</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B17')]: getClassForTable('B17') }]"
+                data-id="B17">B17</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B25')]: getClassForTable('B25') }]"
-                data-id="B25">B25</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="[{ [getClassForTable('B24')]: getClassForTable('B24') }]"
-                data-id="B24"><span>B24</span><span>B23</span></a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B24')]: getClassForTable('B24') }]"
+                data-id="B24">B24</a>
+              <a href="#" class="table" :class="[{ [getClassForTable('B23')]: getClassForTable('B23') }]"
+                data-id="B23">B23</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B22')]: getClassForTable('B22') }]"
                 data-id="B22">B22</a>
-              <a href="#" class="table" :class="[{ [getClassForTable('B21')]: getClassForTable('B21') }]"
+                <a href="#" class="table" :class="[{ [getClassForTable('B21')]: getClassForTable('B21') }]"
                 data-id="B21">B21</a>
             </div>
-            <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B30')]: getClassForTable('B30') }]"
-                data-id="B30">B30</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="[{ [getClassForTable('B29')]: getClassForTable('B29') }]"
-                data-id="B29"><span>B29</span><span>B28</span></a>
+            <div class="d-flex flex-column gap-2"> 
+              <a href="#" class="table" :class="[{ [getClassForTable('B28')]: getClassForTable('B28') }]"
+                data-id="B28">B28</a>
               <a href="#" class="table" :class="[{ [getClassForTable('B27')]: getClassForTable('B27') }]"
                 data-id="B27">B27</a>
-              <a href="#" class="table" :class="[{ [getClassForTable('B26')]: getClassForTable('B26') }]"
+                <a href="#" class="table" :class="[{ [getClassForTable('B26')]: getClassForTable('B26') }]"
                 data-id="B26">B26</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B25')]: getClassForTable('B25') }]"
+                data-id="B25">B25</a>
             </div>
             <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B35')]: getClassForTable('B35') }]"
-                data-id="B35">B35</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="[{ [getClassForTable('B33')]: getClassForTable('B33') }]"
-                data-id="B34"><span>B34</span><span>B33</span></a>
-              <a href="#" class="table" :class="[{ [getClassForTable('B32')]: getClassForTable('B32') }]"
-                data-id="B32">B32</a>
-              <a href="#" class="table" :class="[{ [getClassForTable('B31')]: getClassForTable('B31') }]"
-                data-id="B31">B31</a>
-            </div>
-            <div class="d-flex flex-column gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('B40')]: getClassForTable('B40') }]"
-                data-id="B40">B40</a>
-              <a href="#" class="table-l d-flex flex-column justify-content-between"
-                :class="[{ [getClassForTable('B39')]: getClassForTable('B39') }]"
-                data-id="B39"><span>B39</span><span>B38</span></a>
-              <a href="#" class="table" :class="[{ [getClassForTable('B37')]: getClassForTable('B37') }]"
-                data-id="B37">B37</a>
-              <a href="#" class="table" :class="[{ [getClassForTable('B36')]: getClassForTable('B36') }]"
-                data-id="B36">B36</a>
-            </div>
-            <div class="d-flex flex-column gap-2 justify-content-end">
-              <a href="#" class="table" :class="[{ [getClassForTable('B41')]: getClassForTable('B41') }]"
-                data-id="B41">B41</a>
-            </div>
+                <a href="#" class="table" :class="[{ [getClassForTable('B32')]: getClassForTable('B32') }]"
+                  data-id="B32">B32</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B31')]: getClassForTable('B31') }]"
+                  data-id="B31">B31</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B30')]: getClassForTable('B30') }]"
+                  data-id="B30">B30</a>
+                <a href="#" class="table" :class="[{ [getClassForTable('B29')]: getClassForTable('B29') }]"
+                  data-id="B29">B29</a>
+              </div>
+              <div class="d-flex flex-column gap-2  justify-content-end" >
+                <a href="#" class="table" :class="[{ [getClassForTable('B35')]: getClassForTable('B35') }]"
+                data-id="B35">B33</a>
+              </div>
+              
           </div>
           <div class="zone-a">
             <div class="zone-title">zone a</div>
@@ -575,42 +572,32 @@
               <div class="d-flex">
                 <div class="d-flex flex-column gap-2 ms-4">
                   <div class="empty-box"></div>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip10')]: getClassForTable('vvip10') }]"
-                    data-id="vvip10">10</a>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip8')]: getClassForTable('vvip8') }]"
-                    data-id="vvip8">8</a>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip6')]: getClassForTable('vvip6') }]"
-                    data-id="vvip6">6</a>
+                  <a href="#" class="table"   :class="[{ [getClassForTable('vvip10')]: getClassForTable('vvip10') }]" data-id="vvip10">10</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip8')]: getClassForTable('vvip8') }]"data-id="vvip8">8</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip6')]: getClassForTable('vvip6') }]" data-id="vvip6">6</a>
                 </div>
                 <div class="d-flex flex-column ms-3">
-                  <a href="#" class="table" class="['table', { booked: isActive('vvip11') }]" data-id="vvip11">11</a>
+                  <a href="#" class="table" class="['table', { booked: isActive('vvip11') }]"  data-id="vvip11">11</a>
                 </div>
                 <div class="d-flex flex-column justify-content-end gap-2">
                   <div class="empty-box"></div>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip9')]: getClassForTable('vvip9') }]"
-                    data-id="vvip9">9</a>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip7')]: getClassForTable('vvip7') }]"
-                    data-id="vvip7">7</a>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip5')]: getClassForTable('vvip5') }]"
-                    data-id="vvip5">5</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip9')]: getClassForTable('vvip9') }]" data-id="vvip9">9</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip7')]: getClassForTable('vvip7') }]" data-id="vvip7">7</a>
+                  <a href="#" class="table"  :class="[{ [getClassForTable('vvip5')]: getClassForTable('vvip5') }]"data-id="vvip5">5</a>
                 </div>
               </div>
               <div class="vvip-label">vvip</div>
               <div class="d-flex h-100">
                 <div class="d-flex flex-column gap-2 ms-4">
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip4')]: getClassForTable('vvip4') }]"
-                    data-id="vvip4">4</a>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip2')]: getClassForTable('vvip2') }]"
-                    data-id="vvip2">2</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip4')]: getClassForTable('vvip4') }]" data-id="vvip4">4</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip2')]: getClassForTable('vvip2') }]" data-id="vvip2">2</a>
                 </div>
                 <div class="d-flex flex-column ms-3">
                   <div class="empty-box"></div>
                 </div>
                 <div class="d-flex flex-column justify-content-end gap-2">
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip3')]: getClassForTable('vvip3') }]"
-                    data-id="vvip3">3</a>
-                  <a href="#" class="table" :class="[{ [getClassForTable('vvip1')]: getClassForTable('vvip1') }]"
-                    data-id="vvip1">1</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip3')]: getClassForTable('vvip3') }]" data-id="vvip3">3</a>
+                  <a href="#" class="table" :class="[{ [getClassForTable('vvip1')]: getClassForTable('vvip1') }]" data-id="vvip1">1</a>
                 </div>
               </div>
             </div>
@@ -623,7 +610,6 @@
         </div>
         <div class="zone-bar mb-3">
           <div class="d-flex gap-2 mb-3">
-            <a href="#" class="table align-self-end" data-id="bar9">9</a>
             <div class="bar flex-grow-1">
               bar <i class="bi bi-cup-straw"></i>
             </div>
@@ -648,36 +634,34 @@
           </div>
         </div>
         <div class="zone-pink mb-2">
-          <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" :class="[{ [getClassForTable('E2')]: getClassForTable('E2') }]"
-              data-id="E2">E2</a>
+          <div class="d-flex flex-column justify-content-end gap-2 ">
             <a href="#" class="table" :class="[{ [getClassForTable('E1')]: getClassForTable('E1') }]"
               data-id="E1">E1</a>
+            <a href="#" class="table" :class="[{ [getClassForTable('E8')]: getClassForTable('E8') }]"
+              data-id="E8">E8</a>
+          </div>
+          
+          <div class="d-block  justify-content-end gap-2">
+            <a href="#" class="table d-block flex-fill "
+          :class="[{ [getClassForTable('E2')]: getClassForTable('E2') }]"
+          data-id="E2" style="width:100px; height: 1.7vw; padding-top: 5px;"><span style="margin-right: 40px;">E2</span><span>E3</span></a>
+          <a href="#" class="table d-block flex-fill  "
+          :class="[{ [getClassForTable('E9')]: getClassForTable('E9') }]"
+          data-id="E9" style="width:100px; height: 1.7vw; margin-top: 8px; padding-top: 5px;"><span style="margin-right: 40px;">E9</span><span>E10</span></a>
           </div>
           <div class="d-flex flex-column justify-content-end gap-2">
             <a href="#" class="table" :class="[{ [getClassForTable('E4')]: getClassForTable('E4') }]"
               data-id="E4">E4</a>
-            <a href="#" class="table" :class="[{ [getClassForTable('E3')]: getClassForTable('E3') }]"
-              data-id="E3">E3</a>
+            <a href="#" class="table" :class="[{ [getClassForTable('E11')]: getClassForTable('E11') }]"
+              data-id="E11">E11</a>
           </div>
           <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" :class="[{ [getClassForTable('E6')]: getClassForTable('E6') }]"
-              data-id="E6">E6</a>
             <a href="#" class="table" :class="[{ [getClassForTable('E5')]: getClassForTable('E5') }]"
               data-id="E5">E5</a>
+            <a href="#" class="table" :class="[{ [getClassForTable('E12')]: getClassForTable('E12') }]"
+              data-id="E12">E12</a>
           </div>
-          <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" :class="[{ [getClassForTable('E8')]: getClassForTable('E8') }]"
-              data-id="E8">E8</a>
-            <a href="#" class="table" :class="[{ [getClassForTable('E7')]: getClassForTable('E7') }]"
-              data-id="E7">E7</a>
-          </div>
-          <div class="d-flex flex-column justify-content-end gap-2">
-            <a href="#" class="table" :class="[{ [getClassForTable('E10')]: getClassForTable('E10') }]"
-              data-id="E10">E10</a>
-            <a href="#" class="table" :class="[{ [getClassForTable('E9')]: getClassForTable('E9') }]"
-              data-id="E9">E9</a>
-          </div>
+        
         </div>
         <div class="toilet">
           <div class="control-room">control room</div>
@@ -719,17 +703,14 @@
         <div class="img-popcron text-center">
           <img src="8059.jpg" width="100" alt="">
           <div class="zone-pink mb-2">
-            <div class="d-flex flex-column justify-content-end gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('E11')]: getClassForTable('E11') }]"
-                data-id="E11">E11</a>
-              <a href="#" class="table" :class="[{ [getClassForTable('E12')]: getClassForTable('E12') }]"
-                data-id="E12">E12</a>
-            </div>
-            <div class="d-flex flex-column justify-content-end gap-2">
-              <a href="#" class="table" :class="[{ [getClassForTable('E2')]: getClassForTable('E13') }]"
-                data-id="E13">E13</a>
-              <a href="#" class="table" :class="[{ [getClassForTable('E2')]: getClassForTable('E14') }]"
-                data-id="E14">E14</a>
+            <div class="d-block  justify-content-end gap-2">
+                <a href="#" class="table d-block flex-fill "
+              :class="[{ [getClassForTable('E6')]: getClassForTable('E6') }]"
+              data-id="E6" style="width:100px; height: 1.7vw; padding-top: 5px;"><span style="margin-right: 40px;">E6</span><span>E7</span></a>
+              <a href="#" class="table d-block flex-fill  "
+              :class="[{ [getClassForTable('E13')]: getClassForTable('E13') }]"
+              data-id="E13" style="width:100px; height: 1.7vw; margin-top: 8px; padding-top: 5px;"><span style="margin-right: 40px;">E13</span><span>E14</span></a>
+              </div>
             </div>
 
           </div>
